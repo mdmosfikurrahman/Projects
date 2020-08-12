@@ -1,0 +1,23 @@
+$ sudo apt-get update
+$ sudo apt install -y mailutils
+$ sudo nano /etc/postfix/main.cf
+
+# Add these lines to the main.cf file
+#relayhost = [smtp.gmail.com]:587
+#smtp_sasl_auth_enable = yes
+#smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+#smtp_sasl_security_options = noanonymous
+#smtp_tls_CAfile = /etc/postfix/cacert.pem
+#smtp_use_tls = yes
+
+$ sudo nano /etc/postfix/sasl_passwd
+
+# Insert the following:
+#[smtp.gmail.com]:587 username@gmail.com:password
+
+#Replace username and password with your own.
+$ sudo postmap /etc/postfix/sasl_passwd
+$ sudo chown root:root /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+$ sudo chmod 0600 /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+$ cat /etc/ssl/certs/thawte_Primary_Root_CA.pem | sudo tee -a /etc/postfix/cacert.pem
+$ echo "Test Email message body" | mail -s "Email test subject" test@example.com
