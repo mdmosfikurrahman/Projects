@@ -489,8 +489,8 @@ void see(void)
 
 void close(void)
 {
-    printf("\n\n\n\nThis C Mini Project is developed by Code With C team!");
-    }
+    printf("\n\n\n\nGreetings from Md. Mosfikur Rahman!");
+}
 
 
 void menu(void)
