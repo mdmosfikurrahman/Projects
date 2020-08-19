@@ -45,7 +45,7 @@ void new_acc()
     ptr=fopen("record.dat","a+");
     account_no:
     system("cls");
-    printf("\t\t\t\xB2\xB2\xB2\  ADD RECORD  \xB2\xB2\xB2\xB2");
+    printf("\t\t\t\xB2\xB2\xB2\ ADD RECORD  \xB2\xB2\xB2\xB2");
     printf("\n\n\nEnter today's date(mm/dd/yyyy):");
     scanf("%d/%d/%d",&add.deposit.month,&add.deposit.day,&add.deposit.year);
     printf("\nEnter the account number:");
@@ -489,15 +489,15 @@ void see(void)
 
 void close(void)
 {
-    printf("\n\n\n\nGreetings from Md. Mosfikur Rahman!");
-}
+    printf("\n\n\n\nThis C Mini Project is developed by Code With C team!");
+    }
 
 
 void menu(void)
 {   int choice;
     system("cls");
-    system("color 7");
-    printf("\n\n\t\t\tCUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM");
+    system("color 6");
+    printf("\n\n\t\t\tBANKING MANAGEMENT SYSTEM");
     printf("\n\n\n\t\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
     printf("\n\n\t\t1.Create new account\n\t\t2.Update information of existing account\n\t\t3.For transactions\n\t\t4.Check the details of existing account\n\t\t5.Removing existing account\n\t\t6.View customer's list\n\t\t7.Exit\n\n\n\n\n\t\t Enter your choice:");
     scanf("%d",&choice);
@@ -531,16 +531,6 @@ int main()
     int i=0;
     printf("\n\n\t\tEnter the password to login:");
     scanf("%s",pass);
-    /*do
-    {
-    //if (pass[i]!=13&&pass[i]!=8)
-        {
-            printf("*");
-            pass[i]=getch();
-            i++;
-        }
-    }while (pass[i]!=13);
-    pass[10]='\0';*/
     if (strcmp(pass,password)==0)
         {printf("\n\nPassword Match!\nLOADING");
         for(i=0;i<=6;i++)
